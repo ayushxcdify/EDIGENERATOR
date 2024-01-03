@@ -1,0 +1,14 @@
+C:\Codebase\EdiGenerator\EdiGenerator\bin\Debug\net6.0\EdiGenerator.exe
+C:\Codebase\EdiGenerator\EdiGenerator\bin\Debug\net6.0\EdiGenerator.deps.json
+C:\Codebase\EdiGenerator\EdiGenerator\bin\Debug\net6.0\EdiGenerator.runtimeconfig.json
+C:\Codebase\EdiGenerator\EdiGenerator\bin\Debug\net6.0\EdiGenerator.dll
+C:\Codebase\EdiGenerator\EdiGenerator\bin\Debug\net6.0\EdiGenerator.pdb
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\EdiGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\EdiGenerator.AssemblyInfoInputs.cache
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\EdiGenerator.AssemblyInfo.cs
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\EdiGenerator.csproj.CoreCompileInputs.cache
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\EdiGenerator.dll
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\refint\EdiGenerator.dll
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\EdiGenerator.pdb
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\EdiGenerator.genruntimeconfig.cache
+C:\Codebase\EdiGenerator\EdiGenerator\obj\Debug\net6.0\ref\EdiGenerator.dll

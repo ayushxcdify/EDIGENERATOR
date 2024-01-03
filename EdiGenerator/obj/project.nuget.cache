@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "6UuQy2bx4RX/AYQb26XYfF0wbxQgB4wgItHacmR8XbtQb+5mgHPtOn7EhK6poex3ml7ABAzxHIf9UVxh874JwQ==",
+  "success": true,
+  "projectFilePath": "C:\\Codebase\\EdiGenerator\\EdiGenerator\\EdiGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

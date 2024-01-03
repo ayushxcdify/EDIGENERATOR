@@ -1,0 +1,105 @@
+﻿
+ISA*00* *00* *ZZ*57476 *ZZ*ZirMed *230711*0716*U*00401*001670385*1*P*:
+GS*HC*57476*ZirMed*20230711*0716*1670385*X*004010X098A1
+ST*837*AL0072CLO
+BHT*0019*00*AL0072CLO*20230711*0716*CH
+REF*87*004010X098A1
+NM1*41*2*Experity Inc*****46*115394
+PER*IC*Billing Department*TE*6053366962
+NM1*40*2*ZirMed*****46*ZirMed
+HL*1**20*1
+NM1*85*2*Rural Urgent Care, LLC*****XX*1528702685
+PER*IC*Rural Urgent Care, LLC*TE*2568549989
+N3*1500 First Avenue North, Unit #3
+N4*Birmingham*AL*352031865
+REF*G5*AL007
+REF*EI*473524701
+NM1*87*2*Rural Urgent Care, LLC*****XX*1932586476
+N3*Department # COB1 PO BOX 830525
+N4*Birmingham*AL*352830525
+REF*EI*473524701
+HL*2*1*22*0
+SBR*P*18*******BL
+NM1*IL*1*RIVERO*SUZANNE****MI*XIR921527602
+N3*41 STONELEDGE TRACE N
+N4*JASPER*GA*30143
+DMG*D8*19670408*F
+NM1*PR*2*BCBS GA*****PI*SB601
+REF*FY*NOCD
+
+
+
+
+ public StringBuilder BuildClaim()
+        {
+            var build837 = new StringBuilder();
+            var procedures = _claim.Procedures;
+            var diagnoses = _claim.Diagnoses;
+            var claimNumber = _claim.VisitId;
+            var payerClaimControlNumber = "19:B:1";
+
+            build837.Append("CLM*"+ claimNumber + "*140***"+payerClaimControlNumber+"*Y*A*Y*Y~");
+            build837.Append("HI*ABK:I10~");
+            build837.Append("LX*1~");
+            build837.Append("SV1*HC:99213*140*UN*1***1~");
+            build837.Append("DTP*472*D8*20151124~");
+            build837.Append("HL*3*1*22*0~");
+            build837.Append("SBR*P*18*******12~");
+            build837.Append("NM1*IL*1*BLOGGS*FRED****MI*75893251~");
+            build837.Append("N3*1 ANOTHER STR~");
+            build837.Append("N4*CHICAGO*IL*606129998~");
+            build837.Append("DMG*D8*19700601*M~");
+            build837.Append("NM1*PR*2*AETNA INSURANCE COMPANY*****PI*60054~");
+            build837.Append("N4*ST LOUIS*MO*212441850~");
+            build837.Append("REF*2U*W1014~");
+
+            return build837;
+        }
+
+        public StringBuilder BuildEOF(string interChangeControlNumber)
+        {
+            var buildEOF = new StringBuilder();
+
+            buildEOF.Append("SE*41*1239~");      
+            buildEOF.Append("GE*1*101~");
+            buildEOF.Append("IEA*1*"+ interChangeControlNumber + "~");
+
+            return buildEOF;
+
+        }
+
+ISA Segment: The ISA segment marks the start of the interchange control header and provides information about the sender and receiver of the EDI transaction.
+
+GS Segment: The GS segment marks the start of a functional group and contains information about the sender, receiver, date, and other identifiers.
+
+ST Segment: The ST segment begins the transaction set and indicates the start of an 837 transaction. It contains a unique identifier for the transaction set.
+
+BHT Segment: The BHT segment contains hierarchical information about the transaction, such as the purpose and reference numbers.
+
+NM1 Segments: These segments represent name information for different entities involved in the transaction, such as the hospital, Medicaid, and individuals (like patients).
+
+HL Segment: The HL (hierarchical level) segment identifies levels within the transaction, such as grouping information for the patient and related services.
+
+PRV Segment: This segment identifies provider information, specifying the type of healthcare provider.
+
+N3 and N4 Segments: These segments contain address information for entities like the hospital, specifying street, city, state, and ZIP code.
+
+REF Segment: This segment provides additional reference information, such as an employer identification number (EI).
+
+SBR Segment: The SBR segment identifies the subscriber information, often related to the patient's insurance coverage.
+
+CLM Segment: This segment contains information about the claim, including claim number, dates, and other relevant details.
+
+DTP Segment: The DTP segments indicate various dates, such as the date of the claim or other specific events related to the claim.
+
+HI Segment: The HI segments contain information about healthcare services or conditions, often in the form of codes (such as diagnosis or procedure codes).
+
+LX Segment: The LX segment marks a new line or service within the claim.
+
+SV1 Segment: This segment provides details about the services rendered, including healthcare procedure codes, charges, units, and more.
+
+SE Segment: The SE segment marks the end of the transaction set, providing a count of segments in the transaction set.
+
+GE Segment: The GE segment marks the end of a functional group.
+
+IEA Segment: The IEA segment marks the end of the interchange control and provides a count of functional groups in the interchange
